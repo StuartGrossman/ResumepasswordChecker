@@ -1,0 +1,26 @@
+#overlay{
+  background:#000;
+  border:1px solid black;
+  opacity:1.0;
+  filter:alpha(opacity=40);
+  border: 2px solid;
+  border-radius: 25px;
+}
+body{
+	background: url("http://www.get-covers.com/wp-content/uploads/2012/04/Colorful-Stripes.jpg");
+}
+#header{
+	color: white;
+}
+#resume{
+	color: black;
+	font-size: 25px;
+}
+#response{
+	color: ;
+	font-size: 30px;
+	-webkit-border-image: url('http://www.w3schools.com/css/border.png') 30 30 round; /* Safari 3.1-5 */
+    -o-border-image: url('http://www.w3schools.com/css/border.png') 30 30 round; /* Opera 11-12.1 */
+    border-image: url('http://www.w3schools.com/css/border.png') 30 30 round;
+
+}
