@@ -13,7 +13,7 @@ $(document).ready(function(){
             if(selected_word == password){
                 $('#response').html("Correct Password");
                 $('#response').css({'color' : 'green'});
-                $('#overlay').css({'opacity' : '0.5'});
+                $('#overlay').css({'opacity' : '0.7'});
                 $('#overlay').css({'background' : '#FFF'}); // takes out overlay
                 // $('p').toggle(); // makes resume viewable 
                 // var hold_image = $('#overlay_image').detach();
