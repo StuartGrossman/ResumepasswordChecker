@@ -17,15 +17,24 @@ body{
 #resume{
 	color: black;
 	font-size: 25px;
+  overflow-y: scroll; 
+  height:600px;
+}
+#boxShape{
+  height: 650px;
 }
 #response{
-	color: ;
+  border-radius: 25px;
+  background: white ; 
+  opacity: 0.6; 
 	font-size: 30px;
-	-webkit-border-image: url('http://www.w3schools.com/css/border.png') 30 30 round; /* boarder materal for message */
+	/*-webkit-border-image: url('http://www.w3schools.com/css/border.png') 30 30 round; 
   -o-border-image: url('http://www.w3schools.com/css/border.png') 30 30 round; 
-  border-image: url('http://www.w3schools.com/css/border.png') 30 30 round;
-
+  border-image: url('http://www.w3schools.com/css/border.png') 30 30 round;*/
+}
+#message{
+  color: ;
 }
 #letter_input{
-  width: 25%;
+  width: 10%;
 }

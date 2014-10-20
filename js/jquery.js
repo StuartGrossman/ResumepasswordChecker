@@ -1,56 +1,41 @@
 $(document).ready(function(){
-   var password = "Olset"
+   var password = "Grossman"
    $('form').on('submit', function(event){
-    event.preventDefault();
+        event.preventDefault();
     });
-    var hold_image = "css/black.jpg"
-    console.log(hold_image)
     $('#resume').hide();
-    var twitpar = $('#overlay_image');
-    $('#button').on('click', function(e){
-       var selected_word = $('#letter_input').val(); // user entered password
-         if(selected_word.length >= 0){
+        
+        $('#button').on('click', function(){
+            var selected_word = $('#letter_input').val();
             if(selected_word == password){
-                $('#response').html("Correct Password");
-                $('#response').css({'color' : 'green'});
-                $('#overlay').css({'opacity' : '0.7'});
-                $('#overlay').css({'background' : '#FFF'}); // takes out overlay
-                // $('p').toggle(); // makes resume viewable 
-                // var hold_image = $('#overlay_image').detach();
-                // $('#overlay_image').remove();
-                // console.log(hold_image)
-                $('#boxShape').hide();
-                $('#resume').show();
-                }
-                else if(selected_word.length === 0){
-                $('#response').html("Please enter a Password");
-                $('#response').css({'color' : 'yellow'});
-                $('#overlay').css({'opacity' : '1.0'});
-                $('#overlay').css({'background' : '#000'});
-                $('#resume').hide();
+                 // console.log(selected_word.length)
+                 $('#message').html("Correct Password");
+                 $('#message').css({'color' : 'green'});
+                 $('#overlay').css({'opacity' : '0.7', 'background' : '#FFF'});
+                 $('#boxShape').hide();
+                 $('#resume').fadeIn(1600);
+            };
+        });
+        $('#button').on('click', function(){
+            var selected_word = $('#letter_input').val();
+            if(selected_word.length === 0){
+                // console.log(selected_word.length)
+                $('#resume').fadeOut(1600);
+                $('#message').html("Please enter a Password");
+                $('#message').css({'color' : 'black'});
+                $('#overlay').css({'opacity' : '1.0', 'background' : '#000'});
                 $('#boxShape').show();
-                // $('#overlay_image').append(hold_image);
-                // $('div.overlay').each(function() {
-                //     $(this).find('img').each(function() {
-                //         $(this).attr('src', hold_image);
-                //         });
-                //     });
-                // $('#overlay').css({'background' : '#000'}); // takes out overlay
-                // $('p').css({'display' : 'block'})
-                // $('#resume').hide();
-                }
-                else{ 
-                $('#response').html("Incorrect Password");
-                $('#response').css({'color' : 'red'});
-                $('#overlay').css({'opacity' : '1.0'});
-                $('#overlay').css({'background' : '#000'});
-                $('#resume').hide();
+            };
+        });
+        $('#button').on('click', function(){
+            var selected_word = $('#letter_input').val();
+            if(selected_word != password && selected_word.length >= 1){
+                // console.log(selected_word.length)
+                $('#resume').fadeOut(1600);
+                $('#message').html("Incorrect Password");
+                $('#message').css({'color' : 'red'});
+                $('#overlay').css({'opacity' : '1.0', 'background' : '#000'});
                 $('#boxShape').show();
-                // $('#overlay_image').append(hold_image);
-                // $('#overlay').css({'background' : '#000'}); // takes out overlay
-                // $('p').css({'display' : 'block'}) 
-                // $('#resume').hide();
-            }
-        };
-    });
+            };
+        });
 });
